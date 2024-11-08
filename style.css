@@ -1,0 +1,11 @@
+/* Custom CSS for styling */
+.hero {
+  background-image: url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
