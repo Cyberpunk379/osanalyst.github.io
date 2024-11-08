@@ -20,7 +20,7 @@
 
 .skills-track {
   display: inline-flex;
-  animation: scroll 55s linear infinite;
+  animation: scroll 47s linear infinite;
 }
 
 .skill-icon {
@@ -37,4 +37,29 @@
   }
 }
 
+/* Project Card Hover Effect */
+.card:hover {
+  transform: scale(1.06); /* Scale up the card */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background-color: #0056b3; /* Darker shade of blue */
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Resume Button Specific Styling */
+#about .btn {
+  font-size: 1.1em; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  padding: 10px 20px;
+}
+
+#about .btn:hover {
+  background-color: #28a745; /* Change to a green color on hover */
+  color: #ffffff;
+}
 
