@@ -6,6 +6,18 @@
   <title>Humphrey's Data Analytics Portfolio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+  </style>  
 </head>
 <body>
 
@@ -30,33 +42,59 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-5">
+  <!-- About Me Section (Moved to Top) -->
+  <section id="about" class="py-5 text-center">
     <div class="container">
-      <h2 class="text-center mb-4">Projects</h2>
-      <div class="row">
-        <!-- Project Card 1 -->
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Life Expectancy and Fertility Rate Analysis</h5>
-              <p class="card-text">Analyzed life expectancy and fertility rates using R to identify global health trends.</p>
-              <a href="https://github.com/Cyberpunk379/Life-Expectancy-Fertility-Rate-Analysis" class="btn btn-primary" target="_blank">View on GitHub</a>
-            </div>
+      <img src="/Users/badboihy/project/osanalyst.github.io.git/images/profilepic.jpg" alt="Humphrey's Profile Picture" class="profile-image">
+      <h2 class="mb-4">About Me</h2>
+      <p>I am a data analyst with a strong background in business analytics, machine learning, and digital innovation. I leverage data-driven insights to drive strategic decision-making and solve complex problems.</p>
+    </div>
+  </section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Projects</h2>
+    <div class="row">
+      <!-- Project Card 1: Life Expectancy and Fertility Rate Analysis -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="/Users/badboihy/project/osanalyst.github.io.git/images/life-expectancy.jpg" class="card-img-top" alt="Life Expectancy and Fertility Rate Analysis">
+          <div class="card-body">
+            <h5 class="card-title">Life Expectancy and Fertility Rate Analysis</h5>
+            <p class="card-text">Analyzed life expectancy and fertility rates using R to identify global health trends.</p>
+            <a href="https://github.com/Cyberpunk379/Life-Expectancy-Fertility-Rate-Analysis" class="btn btn-primary" target="_blank">View on GitHub</a>
           </div>
         </div>
-        <!-- Project Card 2 -->
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">Bank Customer Churn Prediction</h5>
-              <p class="card-text">Built a machine learning model to predict customer churn using Python.</p>
-              <a href="https://github.com/YourUsername/BankCustomerChurn" class="btn btn-primary" target="_blank">View on GitHub</a>
-            </div>
+      </div>
+
+      <!-- Project Card 2: Bank Customer Churn Prediction -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="/Users/badboihy/project/osanalyst.github.io.git/images/bank-churn.jpg" class="card-img-top" alt="Bank Customer Churn Prediction">
+          <div class="card-body">
+            <h5 class="card-title">Bank Customer Churn Prediction</h5>
+            <p class="card-text">Built a machine learning model to predict customer churn using Python.</p>
+            <a href="https://github.com/Cyberpunk379/Predicting-Bank-Customer-Churn" class="btn btn-primary" target="_blank">View on GitHub</a>
           </div>
         </div>
+      </div>
+
+      <!-- Project Card 3: Investment Portfolio Optimization -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="/Users/badboihy/project/osanalyst.github.io.git/images/investment-portfolio.jpg" class="card-img-top" alt="Investment Portfolio Optimization">
+          <div class="card-body">
+            <h5 class="card-title">Investment Portfolio Optimization</h5>
+            <p class="card-text">Optimized an investment portfolio by analyzing performance and risk using financial models.</p>
+            <a href="https://github.com/Cyberpunk379/Investment-Portfolio-Optimization" class="btn btn-primary" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
         <!-- Add more project cards as needed -->
       </div>
     </div>
@@ -74,19 +112,11 @@
     </div>
   </section>
 
-  <!-- About Me Section -->
-  <section id="about" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">About Me</h2>
-      <p class="text-center">I am a data analyst with a strong background in business analytics, machine learning, and digital innovation. I leverage data-driven insights to drive strategic decision-making and solve complex problems.</p>
-    </div>
-  </section>
-
   <!-- Contact Section -->
   <section id="contact" class="bg-dark text-white py-5">
     <div class="container">
       <h2 class="text-center mb-4">Contact</h2>
-      <p class="text-center">Connect with me on <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-light">LinkedIn</a> or view my code on <a href="https://github.com/YourUsername" target="_blank" class="text-light">GitHub</a>.</p>
+      <p class="text-center">Connect with me on <a href="https://www.linkedin.com/in/humphreyafobhokhan" target="_blank" class="text-light">LinkedIn</a> or view my code on <a href="https://github.com/Cyberpunk379" target="_blank" class="text-light">GitHub</a>.</p>
     </div>
   </section>
 
