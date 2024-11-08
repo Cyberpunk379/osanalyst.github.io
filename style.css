@@ -1,6 +1,6 @@
 /* Custom CSS for styling */
 .hero {
-  background-image: url('/Users/badboihy/project/osanalyst.github.io.git/images/heroimage.jpg');
+  background-image: url('images/heroimage.jpg');
   background-size: cover;
   background-position: center;
 }
