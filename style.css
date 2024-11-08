@@ -9,3 +9,32 @@
   height: 200px;
   object-fit: cover;
 }
+
+/* Continuous Scrolling Styles */
+.skills-slider {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+}
+
+.skills-track {
+  display: inline-flex;
+  animation: scroll 55s linear infinite;
+}
+
+.skill-icon {
+  height: 80px; /* Increased from 60px to 80px */
+  margin: 0 20px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
