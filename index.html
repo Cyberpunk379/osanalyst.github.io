@@ -3,43 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Humphrey's Data Analytics Portfolio</title>
+  <title>Humphrey Afobhokhan | Data Science & Analytics Portfolio</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    /* Fixed Navigation Bar */
+    html { scroll-behavior: smooth; }
     .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-
-    /* Add padding to the body to prevent overlap */
-    body {
-      padding-top: 70px; /* Adjust based on your navbar height */
-    }
-
-    .profile-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-  </style>  
+    body { padding-top: 70px; }
+    .profile-image { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
+    .row .col-md-4 { display: flex; }
+    .card { display: flex; flex-direction: column; width: 100%; }
+    .card-body { flex: 1 1 auto; display: flex; flex-direction: column; }
+    .card-body .mt-auto { margin-top: auto; }
+    /* Continuous Scrolling Skills */
+    .skills-slider { overflow: hidden; white-space: nowrap; }
+    .skills-track { display: inline-flex; animation: scroll 30s linear infinite; }
+    .skill-icon { height: 80px; margin: 0 20px; }
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  </style>
 </head>
 <body>
-
-  <!-- Fixed Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Humphrey's Portfolio</a>
-    <div class="collapse navbar-collapse">
+    <a class="navbar-brand" href="#">Humphrey Afobhokhan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
@@ -49,177 +42,166 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero text-center text-white bg-primary py-5">
     <div class="container">
-      <h1>Welcome to My Data Analytics Portfolio</h1>
-      <p class="lead">Explore my work in data science, machine learning, and business analytics</p>
+      <h1>Data Science & Analytics Portfolio</h1>
+      <p class="lead">Showcasing projects in real-time machine learning, statistical analysis, and financial modeling</p>
     </div>
   </section>
 
-  <!-- About Me Section (Updated) -->
-<section id="about" class="py-5 text-center">
-  <div class="container">
-    <img src="images/profilepic.jpg" alt="Humphrey's Profile Picture" class="profile-image">
-    <h2 class="mb-4">About Me</h2>
-    <p>I am a data analyst with a strong background in business analytics, machine learning, and digital innovation. I leverage data-driven insights to drive strategic decision-making and solve complex problems.</p>
-    <a href="resume.pdf" class="btn btn-primary" target="_blank">My Resume</a>
-  </div>
-</section>
+    <!-- About Me Section -->
+  <section id="about" class="py-5 text-center bg-white">
+    <div class="container">
+      <img src="images/profilepic.jpg" class="profile-image" alt="Humphrey's Profile Picture">
+      <h2 class="mb-3">About Me</h2>
+      <p class="mb-4">I’m <strong>Humphrey Afobhokhan</strong>, a data analyst with 5+ years of experience leveraging data to drive business insights and strategic decision-making. My expertise spans machine learning, statistical analysis, and interactive data visualization. I’m passionate about solving complex challenges and delivering actionable results.</p>
+      <p class="mb-4">Technologies &amp; Tools: <strong>Python, R, SQL, Tableau, Power BI, Streamlit</strong></p>
+      <div>
+        <a href="mailto:contact@osanalyst.com" class="btn btn-outline-primary mr-2"><i class="fas fa-envelope"></i> Email Me</a>
+        <a href="resume.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-file-download"></i> Download Resume</a>
+      </div>
+    </div>
+  </section>
 
-
-  <!-- Projects Section -->
   <section id="projects" class="py-5">
     <div class="container">
       <h2 class="text-center mb-4">Projects</h2>
       <div class="row">
-        <!-- Project Card 1: Life Expectancy and Fertility Rate Analysis -->
+
+        <!-- Bitcoin ML Dashboard -->
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="images/btc_ml_dashboard.png" class="card-img-top" alt="Bitcoin ML Dashboard">
+            <div class="card-body">
+              <h5 class="card-title">Bitcoin ML Dashboard</h5>
+              <p class="card-text">Built a real-time Streamlit dashboard to classify BTC trends and predict prices with logistic regression, random forest, and ridge models.</p>
+              <div class="embed-responsive embed-responsive-16by9 mb-3">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bmgXipo3LyQ" allowfullscreen></iframe>
+              </div>
+              <div class="mt-auto">
+                <a href="https://github.com/Cyberpunk379/btc_ml_dashboard" class="btn btn-primary" target="_blank">View on GitHub</a>
+                <a href="https://btcmldashboard-9ozcscbhkbzm2xifxgyxnk.streamlit.app/" class="btn btn-outline-secondary mt-2" target="_blank">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Life Expectancy -->
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <img src="images/life-expectancy.jpg" class="card-img-top" alt="Life Expectancy and Fertility Rate Analysis">
             <div class="card-body">
-              <h5 class="card-title">Life Expectancy and Fertility Rate Analysis</h5>
-              <p class="card-text">Analyzed life expectancy and fertility rates using R to identify global health trends.</p>
-              <a href="https://github.com/Cyberpunk379/Life-Expectancy-Fertility-Rate-Analysis" class="btn btn-primary" target="_blank">View on GitHub</a>
+              <h5 class="card-title">Life Expectancy & Fertility Rate Analysis</h5>
+              <p class="card-text">Analyzed global life expectancy and fertility trends in R to uncover key demographic insights.</p>
+              <div class="mt-auto"><a href="https://github.com/Cyberpunk379/Life-Expectancy-Fertility-Rate-Analysis" class="btn btn-primary" target="_blank">View on GitHub</a></div>
             </div>
           </div>
         </div>
 
-        <!-- Project Card 2: Bank Customer Churn Prediction -->
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="images/bank-churn.jpg" class="card-img-top" alt="Bank Customer Churn Prediction">
-            <div class="card-body">
-              <h5 class="card-title">Bank Customer Churn Prediction</h5>
-              <p class="card-text">Built a machine learning model to predict customer churn using Python.</p>
-              <a href="https://github.com/Cyberpunk379/Predicting-Bank-Customer-Churn" class="btn btn-primary" target="_blank">View on GitHub</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card 3: Investment Portfolio Optimization -->
+        <!-- Investment Portfolio -->
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <img src="images/investment-portfolio.jpg" class="card-img-top" alt="Investment Portfolio Optimization">
             <div class="card-body">
               <h5 class="card-title">Investment Portfolio Optimization</h5>
-              <p class="card-text">Optimized an investment portfolio by analyzing performance and risk using financial models.</p>
-              <a href="https://github.com/Cyberpunk379/Investment-Portfolio-Optimization" class="btn btn-primary" target="_blank">View on GitHub</a>
+              <p class="card-text">Optimized a stock portfolio using the Fama-French model in R to maximize returns and manage risk.</p>
+              <div class="mt-auto"><a href="https://github.com/Cyberpunk379/Investment-Portfolio-Optimization" class="btn btn-primary" target="_blank">View on GitHub</a></div>
             </div>
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section (Endless Scrolling with Additional Logos) -->
+  <section id="skills" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Skills</h2>
+      <div class="skills-slider">
+        <div class="skills-track">
+          <img src="images/skills/python-logo.jpg" class="skill-icon" alt="Python">
+          <img src="images/skills/sql-logo.jpg" class="skill-icon" alt="SQL">
+          <img src="images/skills/r-logo.jpg" class="skill-icon" alt="R">
+          <img src="images/skills/tableau-logo.jpg" class="skill-icon" alt="Tableau">
+          <img src="images/skills/power-bi-logo.jpg" class="skill-icon" alt="Power BI">
+          <img src="images/skills/mongodb-logo.jpg" class="skill-icon" alt="MongoDB">
+          <img src="images/skills/excel.jpg" class="skill-icon" alt="Excel">
+          <img src="images/skills/microsoft-office-logo.jpg" class="skill-icon" alt="Microsoft Office">
+          <img src="images/skills/dbt-labs-logo.jpg" class="skill-icon" alt="DBT Labs">
+          <img src="images/skills/deep-learning-logo.jpg" class="skill-icon" alt="Deep Learning">
+          <img src="images/skills/neural-network.jpg" class="skill-icon" alt="Neural Network">
+          <img src="images/skills/nlp-logo.jpg" class="skill-icon" alt="NLP">
+          <img src="images/skills/snowflake.jpg" class="skill-icon" alt="Snowflake">
+          <img src="images/skills/machine-learning-logo.jpg" class="skill-icon" alt="Machine Learning">
+          <img src="images/skills/artificial-intelligence-logo.jpg" class="skill-icon" alt="Artificial Intelligence">
+          <img src="images/skills/github-logo.png" class="skill-icon" alt="Git & GitHub">
+          <img src="images/skills/tensorflow-logo.png" class="skill-icon" alt="TensorFlow">
+          <img src="images/skills/pandas-logo.jpeg" class="skill-icon" alt="Pandas">
+          <img src="images/skills/scikit-learn-logo.jpg" class="skill-icon" alt="Scikit-Learn">
+          <img src="images/skills/apache-spark-logo.png" class="skill-icon" alt="Apache Spark">
+          <img src="images/skills/hadoop-logo.jpg" class="skill-icon" alt="Hadoop">
+          <img src="images/skills/matplotlib-logo.png" class="skill-icon" alt="MATLAB">
+          <!-- Duplicate for seamless scroll -->
+          <img src="images/skills/python-logo.jpg" class="skill-icon">
+          <img src="images/skills/sql-logo.jpg" class="skill-icon">
+          <img src="images/skills/r-logo.jpg" class="skill-icon">
+          <img src="images/skills/tableau-logo.jpg" class="skill-icon">
+          <img src="images/skills/power-bi-logo.jpg" class="skill-icon">
+          <img src="images/skills/mongodb-logo.jpg" class="skill-icon">
+          <img src="images/skills/excel.jpg" class="skill-icon">
+          <img src="images/skills/microsoft-office-logo.jpg" class="skill-icon">
+          <img src="images/skills/dbt-labs-logo.jpg" class="skill-icon">
+          <img src="images/skills/deep-learning-logo.jpg" class="skill-icon">
+          <img src="images/skills/neural-network.jpg" class="skill-icon">
+          <img src="images/skills/nlp-logo.jpg" class="skill-icon">
+          <img src="images/skills/snowflake.jpg" class="skill-icon">
+          <img src="images/skills/machine-learning-logo.jpg" class="skill-icon">
+          <img src="images/skills/artificial-intelligence-logo.jpg" class="skill-icon">
+          <img src="images/skills/github-logo.png" class="skill-icon" alt="Git & GitHub">
+          <img src="images/skills/tensorflow-logo.png" class="skill-icon" alt="TensorFlow">
+          <img src="images/skills/pandas-logo.jpeg" class="skill-icon" alt="Pandas">
+          <img src="images/skills/scikit-learn-logo.jpg" class="skill-icon" alt="Scikit-Learn">
+          <img src="images/skills/apache-spark-logo.png" class="skill-icon" alt="Apache Spark">
+          <img src="images/skills/hadoop-logo.jpg" class="skill-icon" alt="Hadoop">
+          <img src="images/skills/matplotlib-logo.png" class="skill-icon" alt="MATLAB">
         </div>
       </div>
     </div>
   </section>
 
-
-<!-- Skills Section (Endless Scrolling with Additional Logos) -->
-<section id="skills" class="bg-light py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Skills</h2>
-    <div class="skills-slider">
-      <div class="skills-track">
-        <!-- Original Set of Logos (Including New Logos) -->
-        <img src="images/skills/python-logo.jpg" alt="Python" class="skill-icon">
-        <img src="images/skills/sql-logo.jpg" alt="SQL" class="skill-icon">
-        <img src="images/skills/r-logo.jpg" alt="R" class="skill-icon">
-        <img src="images/skills/tableau-logo.jpg" alt="Tableau" class="skill-icon">
-        <img src="images/skills/power-bi-logo.jpg" alt="Power BI" class="skill-icon">
-        <img src="images/skills/mongodb-logo.jpg" alt="MongoDB" class="skill-icon">
-        <img src="images/skills/excel.jpg" alt="Excel" class="skill-icon">
-        <img src="images/skills/microsoft-office-logo.jpg" alt="Microsoft Office" class="skill-icon">
-        <img src="images/skills/dbt-labs-logo.jpg" alt="DBT Labs" class="skill-icon">
-        <img src="images/skills/deep-learning-logo.jpg" alt="Deep Learning" class="skill-icon">
-        <img src="images/skills/neural-network.jpg" alt="Neural Network" class="skill-icon">
-        <img src="images/skills/nlp-logo.jpg" alt="NLP" class="skill-icon">
-        <img src="images/skills/snowflake.jpg" alt="Snowflake" class="skill-icon">
-        <img src="images/skills/machine-learning-logo.jpg" alt="Machine Learning" class="skill-icon">
-        <img src="images/skills/artificial-intelligence-logo.jpg" alt="Artificial Intelligence" class="skill-icon">
-        
-        <!-- Duplicate Set of Logos for Continuous Scrolling -->
-        <img src="images/skills/python-logo.jpg" alt="Python" class="skill-icon">
-        <img src="images/skills/sql-logo.jpg" alt="SQL" class="skill-icon">
-        <img src="images/skills/r-logo.jpg" alt="R" class="skill-icon">
-        <img src="images/skills/tableau-logo.jpg" alt="Tableau" class="skill-icon">
-        <img src="images/skills/power-bi-logo.jpg" alt="Power BI" class="skill-icon">
-        <img src="images/skills/mongodb-logo.jpg" alt="MongoDB" class="skill-icon">
-        <img src="images/skills/excel.jpg" alt="Excel" class="skill-icon">
-        <img src="images/skills/microsoft-office-logo.jpg" alt="Microsoft Office" class="skill-icon">
-        <img src="images/skills/dbt-labs-logo.jpg" alt="DBT Labs" class="skill-icon">
-        <img src="images/skills/deep-learning-logo.jpg" alt="Deep Learning" class="skill-icon">
-        <img src="images/skills/neural-network.jpg" alt="Neural Network" class="skill-icon">
-        <img src="images/skills/nlp-logo.jpg" alt="NLP" class="skill-icon">
-        <img src="images/skills/snowflake.jpg" alt="Snowflake" class="skill-icon">
-        <img src="images/skills/machine-learning-logo.jpg" alt="Machine Learning" class="skill-icon">
-        <img src="images/skills/artificial-intelligence-logo.jpg" alt="Artificial Intelligence" class="skill-icon">
-
-                <!-- Duplicate Set of Logos for Continuous Scrolling -->
-        <img src="images/skills/python-logo.jpg" alt="Python" class="skill-icon">
-        <img src="images/skills/sql-logo.jpg" alt="SQL" class="skill-icon">
-        <img src="images/skills/r-logo.jpg" alt="R" class="skill-icon">
-        <img src="images/skills/tableau-logo.jpg" alt="Tableau" class="skill-icon">
-        <img src="images/skills/power-bi-logo.jpg" alt="Power BI" class="skill-icon">
-        <img src="images/skills/mongodb-logo.jpg" alt="MongoDB" class="skill-icon">
-        <img src="images/skills/excel.jpg" alt="Excel" class="skill-icon">
-        <img src="images/skills/microsoft-office-logo.jpg" alt="Microsoft Office" class="skill-icon">
-        <img src="images/skills/dbt-labs-logo.jpg" alt="DBT Labs" class="skill-icon">
-        <img src="images/skills/deep-learning-logo.jpg" alt="Deep Learning" class="skill-icon">
-        <img src="images/skills/neural-network.jpg" alt="Neural Network" class="skill-icon">
-        <img src="images/skills/nlp-logo.jpg" alt="NLP" class="skill-icon">
-        <img src="images/skills/snowflake.jpg" alt="Snowflake" class="skill-icon">
-        <img src="images/skills/machine-learning-logo.jpg" alt="Machine Learning" class="skill-icon">
-        <img src="images/skills/artificial-intelligence-logo.jpg" alt="Artificial Intelligence" class="skill-icon">
+  <section id="contact" class="bg-dark text-white py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form action="https://formspree.io/f/mdkogvaw" method="POST">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" name="_replyto" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="https://www.linkedin.com/in/humphreyafobhokhan" class="text-light mx-2" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/Cyberpunk379" class="text-light mx-2" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <a href="mailto:contact@osanalyst.com" class="text-light mx-2"><i class="fas fa-envelope fa-2x"></i></a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-
-
-  <!-- Contact Section -->
-<section id="contact" class="bg-dark text-white py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Contact</h2>
-    <div class="row justify-content-center">
-      <!-- Contact Form -->
-      <div class="col-md-6">
-        <form action="https://formspree.io/f/mdkogvaw" method="POST">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="_replyto" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-        </form>
-      </div>
-    </div>
-    <!-- Social Media Links -->
-    <div class="text-center mt-4">
-      <a href="https://www.linkedin.com/in/humphreyafobhokhan" target="_blank" class="text-light mx-2">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="https://github.com/Cyberpunk379" target="_blank" class="text-light mx-2">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-      <a href="mailto:contact@osanalyst.com" class="text-light mx-2">
-        <i class="fas fa-envelope fa-2x"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Humphrey's Portfolio</p>
+    <p>&copy; 2024 Humphrey Afobhokhan</p>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
