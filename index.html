@@ -3,109 +3,298 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Humphrey Afobhokhan | Data Science & Analytics Portfolio</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Humphrey Afobhokhan | AI Systems · Health Infrastructure · Data Science</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    html { scroll-behavior: smooth; }
-    .navbar {
-      position: fixed; top: 0; width: 100%; z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    body { padding-top: 70px; }
-    .profile-image { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
-    .row .col-md-4 { display: flex; }
-    .card { display: flex; flex-direction: column; width: 100%; }
-    .card-body { flex: 1 1 auto; display: flex; flex-direction: column; }
-    .card-body .mt-auto { margin-top: auto; }
-    /* Continuous Scrolling Skills */
-    .skills-slider { overflow: hidden; white-space: nowrap; }
-    .skills-track { display: inline-flex; animation: scroll 30s linear infinite; }
-    .skill-icon { height: 80px; margin: 0 20px; }
-    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Humphrey Afobhokhan</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+  <!-- ═══════════════════════ NAVIGATION ═══════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">HA</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#innovation">Innovation</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="hero text-center text-white bg-primary py-5">
-    <div class="container">
-      <h1>Data Science & Analytics Portfolio</h1>
-      <p class="lead">Showcasing projects in real-time machine learning, statistical analysis, and financial modeling</p>
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <header id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Builder · Researcher · Founder</p>
+      <h1 class="hero-title">Humphrey<br>Afobhokhan</h1>
+      <p class="hero-sub">Designing intelligent systems at the intersection of<br><strong>AI, health infrastructure, and data science.</strong></p>
+      <div class="hero-actions">
+        <a href="#innovation" class="btn btn-primary">View Innovation</a>
+        <a href="resume.pdf" class="btn btn-outline" target="_blank"><i class="fas fa-arrow-down"></i> Resume</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-chip"><i class="fas fa-rocket"></i> Founder, Medyl</div>
+        <div class="proof-chip"><i class="fas fa-graduation-cap"></i> DBA Researcher + MS</div>
+        <div class="proof-chip"><i class="fas fa-flask"></i> Healthcare AI Research</div>
+      </div>
     </div>
-  </section>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
 
-    <!-- About Me Section -->
-  <section id="about" class="py-5 text-center bg-white">
+  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <section id="about">
     <div class="container">
-      <img src="images/profilepic.jpg" class="profile-image" alt="Humphrey's Profile Picture">
-      <h2 class="mb-3">About Me</h2>
-      <p class="mb-4">I’m <strong>Humphrey Afobhokhan</strong>, a data analyst with 5+ years of experience leveraging data to drive business insights and strategic decision-making. My expertise spans machine learning, statistical analysis, and interactive data visualization. I’m passionate about solving complex challenges and delivering actionable results.</p>
-      <p class="mb-4">Technologies &amp; Tools: <strong>Python, R, SQL, Tableau, Power BI, Streamlit</strong></p>
-      <div>
-        <a href="mailto:contact@osanalyst.com" class="btn btn-outline-primary mr-2"><i class="fas fa-envelope"></i> Email Me</a>
-        <a href="resume.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-file-download"></i> Download Resume</a>
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="image-frame">
+            <img src="images/profilepic.jpg" alt="Humphrey Afobhokhan">
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-label">About</p>
+          <h2>I build AI systems that make<br>healthcare infrastructure smarter.</h2>
+          <p class="about-body">
+            I'm an applied AI systems builder and researcher focused on health infrastructure and data science. My work spans machine learning, predictive modeling, and the design of intelligent data systems that translate complex data into real-world clinical impact.
+          </p>
+          <p class="about-body">
+            Currently pursuing a Doctorate in Business Administration with research focused on healthcare AI governance, alongside an MS at the University of San Francisco to strengthen my quantitative foundation. I bring 5+ years of experience turning data into strategic decisions — and I'm now focused on building the infrastructure layer for next-generation health systems.
+          </p>
+          <div class="about-tools">
+            <span class="tool-tag">Python</span>
+            <span class="tool-tag">R</span>
+            <span class="tool-tag">SQL</span>
+            <span class="tool-tag">Tableau</span>
+            <span class="tool-tag">Power BI</span>
+            <span class="tool-tag">Streamlit</span>
+            <span class="tool-tag">Firebase</span>
+            <span class="tool-tag">TensorFlow</span>
+          </div>
+          <div class="about-links">
+            <a href="mailto:contact@osanalyst.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email Me</a>
+            <a href="https://www.linkedin.com/in/humphreyafobhokhan" class="btn btn-outline" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Cyberpunk379" class="btn btn-outline" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=9831192" class="btn btn-outline" target="_blank"><i class="fas fa-file-alt"></i> SSRN</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="py-5">
+  <!-- ═══════════════════════ INNOVATION & VENTURES ═══════════════════════ -->
+  <section id="innovation">
     <div class="container">
-      <h2 class="text-center mb-4">Projects</h2>
-      <div class="row">
+      <p class="section-label">Innovation &amp; Ventures</p>
+      <h2 class="section-title">Building platforms, not just projects.</h2>
+      <p class="section-sub">Applied AI infrastructure and creative ventures designed for scale and impact.</p>
+
+      <div class="venture-grid">
+
+        <!-- Medyl -->
+        <div class="venture-card venture-featured">
+          <div class="venture-badge">Featured Venture</div>
+          <div class="venture-icon"><i class="fas fa-heartbeat"></i></div>
+          <h3>Medyl</h3>
+          <p class="venture-role">Founder &amp; CEO</p>
+          <p class="venture-desc">
+            A patient-centered AI health infrastructure platform that structures longitudinal health data, generates predictive insights, and enables secure data sharing between patients, hospitals, and pharmacies. Built with Firebase, AI inference pipelines, and change-detection systems for tracking health deltas over time.
+          </p>
+          <div class="venture-tags">
+            <span>Health-Tech</span>
+            <span>AI Infrastructure</span>
+            <span>Decentralized Data</span>
+          </div>
+          <div class="venture-actions">
+            <a href="https://medyl.com" class="btn btn-primary" target="_blank">Visit Platform</a>
+          </div>
+        </div>
+
+        <!-- Microsight -->
+        <div class="venture-card">
+          <div class="venture-icon"><i class="fas fa-microscope"></i></div>
+          <h3>Microsight</h3>
+          <p class="venture-role">Founder</p>
+          <p class="venture-desc">
+            Developing an AI-powered wearable microscopy system for hands-free smart diagnostics and real-time pathogen detection. Targeting resource-constrained clinical environments.
+          </p>
+          <div class="venture-tags">
+            <span>AI Diagnostics</span>
+            <span>Wearable Tech</span>
+            <span>Computer Vision</span>
+          </div>
+        </div>
+
+        <!-- Fahoy Music -->
+        <div class="venture-card">
+          <div class="venture-icon"><i class="fas fa-music"></i></div>
+          <h3>Fahoy Music</h3>
+          <p class="venture-role">Founder &amp; Artist (BadboiHY)</p>
+          <p class="venture-desc">
+            An independent music label focused on publishing and digital marketing for emerging talent. Pioneering "Afrotrap" — a genre fusion of Afro and trap sounds.
+          </p>
+          <div class="venture-tags">
+            <span>Music Label</span>
+            <span>Digital Marketing</span>
+            <span>Afrotrap</span>
+          </div>
+          <div class="venture-actions">
+            <a href="https://fahoy.com" class="btn btn-primary" target="_blank">Visit Fahoy</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ RESEARCH ═══════════════════════ -->
+  <section id="research">
+    <div class="container">
+      <p class="section-label">Research</p>
+      <h2 class="section-title">Academic work at the frontier of healthcare AI.</h2>
+      <p class="section-sub">Focused on patient-centered data architectures, AI governance, and implementation frameworks for emerging markets.</p>
+
+      <div class="research-grid">
+
+        <div class="research-card">
+          <div class="research-status">Published</div>
+          <h3>Patient-Centered Health Data Architectures for Interoperable Care in Emerging and Underserved Markets</h3>
+          <p>Explores structured patient data architectures and interoperability frameworks designed to improve continuity of care in fragmented healthcare systems across emerging and underserved markets.</p>
+          <div class="research-meta">
+            <span><i class="fas fa-calendar"></i> January 2026</span>
+            <span><i class="fas fa-eye"></i> 109 views · 26 downloads</span>
+          </div>
+          <div class="research-links">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6031615" target="_blank" class="research-link"><i class="fas fa-file-alt"></i> SSRN</a>
+            <a href="https://scholar.google.com/scholar?q=%22Patient-Centered+Health+Data+Architectures+for+Interoperable+Care%22" target="_blank" class="research-link"><i class="fas fa-graduation-cap"></i> Scholar</a>
+            <a href="https://orcid.org/0009-0004-7176-0186" target="_blank" class="research-link"><i class="fas fa-id-badge"></i> ORCID</a>
+          </div>
+        </div>
+
+        <div class="research-card">
+          <div class="research-status">Published</div>
+          <h3>Governing Patient-Centered Health Data Systems: Trust, Consent, and AI Accountability in Emerging Digital Health Ecosystems</h3>
+          <p>Proposes governance frameworks addressing trust, consent, and AI accountability in patient-centered digital health ecosystems, with a focus on emerging markets and ethical deployment considerations.</p>
+          <div class="research-meta">
+            <span><i class="fas fa-calendar"></i> January 2026</span>
+            <span><i class="fas fa-eye"></i> 73 views · 16 downloads</span>
+          </div>
+          <div class="research-links">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6112566" target="_blank" class="research-link"><i class="fas fa-file-alt"></i> SSRN</a>
+            <a href="https://scholar.google.com/scholar?q=%22Governing+Patient-Centered+Health+Data+Systems%22" target="_blank" class="research-link"><i class="fas fa-graduation-cap"></i> Scholar</a>
+            <a href="https://orcid.org/0009-0004-7176-0186" target="_blank" class="research-link"><i class="fas fa-id-badge"></i> ORCID</a>
+          </div>
+        </div>
+
+        <div class="research-card">
+          <div class="research-status working">In Progress</div>
+          <h3>Healthcare AI Implementation: From Theory to Practice</h3>
+          <p>Third paper in the series, exploring practical implementation strategies and system design patterns for deploying AI-driven health platforms in real-world clinical environments.</p>
+          <div class="research-meta">
+            <span><i class="fas fa-calendar"></i> 2026</span>
+            <span><i class="fas fa-tag"></i> Implementation, Systems Design</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="research-author-links">
+        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=9831192" target="_blank" class="btn btn-outline"><i class="fas fa-file-alt"></i> All Papers on SSRN</a>
+        <a href="https://orcid.org/0009-0004-7176-0186" target="_blank" class="btn btn-outline"><i class="fas fa-id-badge"></i> ORCID Profile</a>
+      </div>
+
+      <div class="research-credentials">
+        <div class="cred-item">
+          <i class="fas fa-university"></i>
+          <div>
+            <strong>DBA Candidate</strong>
+            <span>Healthcare AI Systems Research</span>
+          </div>
+        </div>
+        <div class="cred-item">
+          <i class="fas fa-chart-line"></i>
+          <div>
+            <strong>MS, University of San Francisco</strong>
+            <span>Quantitative Methods &amp; Data Science</span>
+          </div>
+        </div>
+        <div class="cred-item">
+          <i class="fas fa-dna"></i>
+          <div>
+            <strong>BSc Microbiology</strong>
+            <span>Benson Idahosa University</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SELECTED WORK ═══════════════════════ -->
+  <section id="work">
+    <div class="container">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title">Technical projects and shipped systems.</h2>
+
+      <div class="projects-grid">
 
         <!-- Bitcoin ML Dashboard -->
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="images/btc_ml_dashboard.png" class="card-img-top" alt="Bitcoin ML Dashboard">
-            <div class="card-body">
-              <h5 class="card-title">Bitcoin ML Dashboard</h5>
-              <p class="card-text">Built a real-time Streamlit dashboard to classify BTC trends and predict prices with logistic regression, random forest, and ridge models.</p>
-              <div class="embed-responsive embed-responsive-16by9 mb-3">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bmgXipo3LyQ" allowfullscreen></iframe>
-              </div>
-              <div class="mt-auto">
-                <a href="https://github.com/Cyberpunk379/btc_ml_dashboard" class="btn btn-primary" target="_blank">View on GitHub</a>
-                <a href="https://btcmldashboard-9ozcscbhkbzm2xifxgyxnk.streamlit.app/" class="btn btn-outline-secondary mt-2" target="_blank">Live Demo</a>
-              </div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="images/btc_ml_dashboard.png" alt="Bitcoin ML Dashboard">
+          </div>
+          <div class="project-body">
+            <h3>Bitcoin ML Dashboard</h3>
+            <p>Real-time Streamlit dashboard classifying BTC trends and predicting prices using logistic regression, random forest, and ridge models. Includes live data pipelines and interactive visualization.</p>
+            <div class="project-stack">
+              <span>Python</span><span>Streamlit</span><span>Scikit-Learn</span><span>APIs</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Cyberpunk379/btc_ml_dashboard" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://btcmldashboard-9ozcscbhkbzm2xifxgyxnk.streamlit.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://www.youtube.com/watch?v=bmgXipo3LyQ" target="_blank"><i class="fab fa-youtube"></i> Video</a>
             </div>
           </div>
         </div>
 
         <!-- Life Expectancy -->
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="images/life-expectancy.jpg" class="card-img-top" alt="Life Expectancy and Fertility Rate Analysis">
-            <div class="card-body">
-              <h5 class="card-title">Life Expectancy & Fertility Rate Analysis</h5>
-              <p class="card-text">Analyzed global life expectancy and fertility trends in R to uncover key demographic insights.</p>
-              <div class="mt-auto"><a href="https://github.com/Cyberpunk379/Life-Expectancy-Fertility-Rate-Analysis" class="btn btn-primary" target="_blank">View on GitHub</a></div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="images/life-expectancy.jpg" alt="Life Expectancy & Fertility Rate Analysis">
+          </div>
+          <div class="project-body">
+            <h3>Life Expectancy &amp; Fertility Rate Analysis</h3>
+            <p>Global demographic analysis in R exploring the relationship between life expectancy and fertility rates. Uncovered key population health insights across nations and time periods.</p>
+            <div class="project-stack">
+              <span>R</span><span>ggplot2</span><span>Statistical Analysis</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Cyberpunk379/Life-Expectancy-Fertility-Rate-Analysis" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
         </div>
 
         <!-- Investment Portfolio -->
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="images/investment-portfolio.jpg" class="card-img-top" alt="Investment Portfolio Optimization">
-            <div class="card-body">
-              <h5 class="card-title">Investment Portfolio Optimization</h5>
-              <p class="card-text">Optimized a stock portfolio using the Fama-French model in R to maximize returns and manage risk.</p>
-              <div class="mt-auto"><a href="https://github.com/Cyberpunk379/Investment-Portfolio-Optimization" class="btn btn-primary" target="_blank">View on GitHub</a></div>
+        <div class="project-card">
+          <div class="project-img">
+            <img src="images/investment-portfolio.jpg" alt="Investment Portfolio Optimization">
+          </div>
+          <div class="project-body">
+            <h3>Investment Portfolio Optimization</h3>
+            <p>Portfolio optimization using the Fama-French multi-factor model in R. Maximized risk-adjusted returns through mean-variance analysis and factor exposure management.</p>
+            <div class="project-stack">
+              <span>R</span><span>Fama-French</span><span>Quantitative Finance</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Cyberpunk379/Investment-Portfolio-Optimization" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
         </div>
@@ -114,10 +303,9 @@
     </div>
   </section>
 
-  <!-- Skills Section (Endless Scrolling with Additional Logos) -->
-  <section id="skills" class="bg-light py-5">
+  <!-- ═══════════════════════ SKILLS (Compact) ═══════════════════════ -->
+  <section id="skills">
     <div class="container">
-      <h2 class="text-center mb-4">Skills</h2>
       <div class="skills-slider">
         <div class="skills-track">
           <img src="images/skills/python-logo.jpg" class="skill-icon" alt="Python">
@@ -127,84 +315,108 @@
           <img src="images/skills/power-bi-logo.jpg" class="skill-icon" alt="Power BI">
           <img src="images/skills/mongodb-logo.jpg" class="skill-icon" alt="MongoDB">
           <img src="images/skills/excel.jpg" class="skill-icon" alt="Excel">
-          <img src="images/skills/microsoft-office-logo.jpg" class="skill-icon" alt="Microsoft Office">
           <img src="images/skills/dbt-labs-logo.jpg" class="skill-icon" alt="DBT Labs">
           <img src="images/skills/deep-learning-logo.jpg" class="skill-icon" alt="Deep Learning">
-          <img src="images/skills/neural-network.jpg" class="skill-icon" alt="Neural Network">
-          <img src="images/skills/nlp-logo.jpg" class="skill-icon" alt="NLP">
           <img src="images/skills/snowflake.jpg" class="skill-icon" alt="Snowflake">
           <img src="images/skills/machine-learning-logo.jpg" class="skill-icon" alt="Machine Learning">
-          <img src="images/skills/artificial-intelligence-logo.jpg" class="skill-icon" alt="Artificial Intelligence">
           <img src="images/skills/github-logo.png" class="skill-icon" alt="Git & GitHub">
           <img src="images/skills/tensorflow-logo.png" class="skill-icon" alt="TensorFlow">
           <img src="images/skills/pandas-logo.jpeg" class="skill-icon" alt="Pandas">
           <img src="images/skills/scikit-learn-logo.jpg" class="skill-icon" alt="Scikit-Learn">
           <img src="images/skills/apache-spark-logo.png" class="skill-icon" alt="Apache Spark">
-          <img src="images/skills/hadoop-logo.jpg" class="skill-icon" alt="Hadoop">
-          <img src="images/skills/matplotlib-logo.png" class="skill-icon" alt="MATLAB">
           <!-- Duplicate for seamless scroll -->
-          <img src="images/skills/python-logo.jpg" class="skill-icon">
-          <img src="images/skills/sql-logo.jpg" class="skill-icon">
-          <img src="images/skills/r-logo.jpg" class="skill-icon">
-          <img src="images/skills/tableau-logo.jpg" class="skill-icon">
-          <img src="images/skills/power-bi-logo.jpg" class="skill-icon">
-          <img src="images/skills/mongodb-logo.jpg" class="skill-icon">
-          <img src="images/skills/excel.jpg" class="skill-icon">
-          <img src="images/skills/microsoft-office-logo.jpg" class="skill-icon">
-          <img src="images/skills/dbt-labs-logo.jpg" class="skill-icon">
-          <img src="images/skills/deep-learning-logo.jpg" class="skill-icon">
-          <img src="images/skills/neural-network.jpg" class="skill-icon">
-          <img src="images/skills/nlp-logo.jpg" class="skill-icon">
-          <img src="images/skills/snowflake.jpg" class="skill-icon">
-          <img src="images/skills/machine-learning-logo.jpg" class="skill-icon">
-          <img src="images/skills/artificial-intelligence-logo.jpg" class="skill-icon">
+          <img src="images/skills/python-logo.jpg" class="skill-icon" alt="Python">
+          <img src="images/skills/sql-logo.jpg" class="skill-icon" alt="SQL">
+          <img src="images/skills/r-logo.jpg" class="skill-icon" alt="R">
+          <img src="images/skills/tableau-logo.jpg" class="skill-icon" alt="Tableau">
+          <img src="images/skills/power-bi-logo.jpg" class="skill-icon" alt="Power BI">
+          <img src="images/skills/mongodb-logo.jpg" class="skill-icon" alt="MongoDB">
+          <img src="images/skills/excel.jpg" class="skill-icon" alt="Excel">
+          <img src="images/skills/dbt-labs-logo.jpg" class="skill-icon" alt="DBT Labs">
+          <img src="images/skills/deep-learning-logo.jpg" class="skill-icon" alt="Deep Learning">
+          <img src="images/skills/snowflake.jpg" class="skill-icon" alt="Snowflake">
+          <img src="images/skills/machine-learning-logo.jpg" class="skill-icon" alt="Machine Learning">
           <img src="images/skills/github-logo.png" class="skill-icon" alt="Git & GitHub">
           <img src="images/skills/tensorflow-logo.png" class="skill-icon" alt="TensorFlow">
           <img src="images/skills/pandas-logo.jpeg" class="skill-icon" alt="Pandas">
           <img src="images/skills/scikit-learn-logo.jpg" class="skill-icon" alt="Scikit-Learn">
           <img src="images/skills/apache-spark-logo.png" class="skill-icon" alt="Apache Spark">
-          <img src="images/skills/hadoop-logo.jpg" class="skill-icon" alt="Hadoop">
-          <img src="images/skills/matplotlib-logo.png" class="skill-icon" alt="MATLAB">
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="bg-dark text-white py-5">
+  <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+  <section id="contact">
     <div class="container">
-      <h2 class="text-center mb-4">Contact</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-6">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-label">Contact</p>
+          <h2>Let's build something<br>that matters.</h2>
+          <p>Whether it's research collaboration, venture opportunities, speaking engagements, or consulting — I'd love to hear from you.</p>
+          <div class="contact-channels">
+            <a href="mailto:contact@osanalyst.com"><i class="fas fa-envelope"></i> contact@osanalyst.com</a>
+            <a href="https://www.linkedin.com/in/humphreyafobhokhan" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Cyberpunk379" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
           <form action="https://formspree.io/f/mdkogvaw" method="POST">
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" class="form-control" id="name" name="name" required>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
             </div>
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" class="form-control" id="email" name="_replyto" required>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="_replyto" required placeholder="you@example.com">
             </div>
-            <div class="form-group">
-              <label for="message">Message:</label>
-              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="What's on your mind?"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            <button type="submit" class="btn btn-primary btn-full">Send Message <i class="fas fa-paper-plane"></i></button>
           </form>
         </div>
       </div>
-      <div class="text-center mt-4">
-        <a href="https://www.linkedin.com/in/humphreyafobhokhan" class="text-light mx-2" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-        <a href="https://github.com/Cyberpunk379" class="text-light mx-2" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-        <a href="mailto:contact@osanalyst.com" class="text-light mx-2"><i class="fas fa-envelope fa-2x"></i></a>
-      </div>
     </div>
   </section>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025 Humphrey Afobhokhan</p>
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>&copy; 2026 Humphrey Afobhokhan</p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/humphreyafobhokhan" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Cyberpunk379" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=9831192" target="_blank"><i class="fas fa-file-alt"></i></a>
+          <a href="mailto:contact@osanalyst.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ═══════════════════════ SCRIPTS ═══════════════════════ -->
+  <script>
+    // Navbar background on scroll
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.remove('open');
+      });
+    });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.venture-card, .research-card, .project-card, .cred-item, .about-text, .about-image, .contact-info, .contact-form-wrap').forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>
